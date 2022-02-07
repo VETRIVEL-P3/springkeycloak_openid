@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sam
+    username: postgres
+    password: Vetri@123
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      initialization-fail-timeout: 0
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+keycloak:
+  auth-server-url: http://localhost:8080/auth/
+  realm: spd
+  resource: spclk
+  public-client: true
+  bearer-only: true
+
